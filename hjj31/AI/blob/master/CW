@@ -1,0 +1,275 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "HW_J020_040720.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPiRItU0+ZEJroQM7BL5BqF",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/hjj31/AI/blob/master/hjj31/AI/blob/master/CW\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "5ZDj-jRZlu9I",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "3d7692b5-5eec-4390-a104-17463ba579c8"
+      },
+      "source": [
+        "#Assignment 1\n",
+        "# say \"Hello, World!\" in python\n",
+        "print (\"Hello, World!\")"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Hello, World!\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "eoOw4ogil0s3",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 52
+        },
+        "outputId": "9bbdbdf4-18ba-40c4-fe9b-14b67ec9ce2f"
+      },
+      "source": [
+        "#Assignment 2\n",
+        "# Given an integer, perform the following conditional actions:\n",
+        "# If n is odd, print Weird\n",
+        "# If n is even and in the inclusive range of 2 to 5, print Not Weird\n",
+        "# If n is even and in the inclusive range of 6 to 20, print Weird\n",
+        "# If n is even and greater than 20, print Not Weird\n",
+        "import math\n",
+        "import os\n",
+        "import random\n",
+        "import re\n",
+        "import sys\n",
+        "\n",
+        "n = int(input())\n",
+        "if n%2 != 0:\n",
+        "    print(\"Weird\")\n",
+        "elif n%2 == 0 and n>=2 and n<= 5:\n",
+        "    print(\"Not Weird\")\n",
+        "elif n%2 == 0 and n>=6 and n<= 20:\n",
+        "    print(\"Weird\")\n",
+        "elif n%2 == 0 and n>20:\n",
+        "    print(\"Not Weird\")"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "21\n",
+            "Weird\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "sbYtJVMxl0vg",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 105
+        },
+        "outputId": "b95d36e2-dfac-4b74-8f56-59096fe14274"
+      },
+      "source": [
+        "#Assignment 3\n",
+        "#Read two integers from STDIN and print three lines where: \n",
+        "#The first line contains the sum of the two numbers. \n",
+        "#The second line contains the difference of the two numbers (first - second). \n",
+        "#The third line contains the product of the two numbers.\n",
+        "a = int(input())\n",
+        "b = int(input())\n",
+        "\n",
+        "print(a+b)\n",
+        "print(a-b)\n",
+        "print(a*b)"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "-1\n",
+            "2\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "mCVA5QDvl0xf",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 87
+        },
+        "outputId": "db91a41d-2dd5-4b11-bb07-7d52f37645e2"
+      },
+      "source": [
+        "#Assignment 4\n",
+        "#Read two integers and print two lines. The first line should contain integer division, a//b. The second line should contain float division, a/b\n",
+        "a = int(input())\n",
+        "b = int(input())\n",
+        "print(a//b)\n",
+        "print(a/b)"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1\n",
+            "2\n",
+            "0\n",
+            "0.5\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "UKykxVJDsyjX",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 123
+        },
+        "outputId": "b3c1cc35-2ee3-4b81-c263-2f2d0e35a427"
+      },
+      "source": [
+        "#Assignment 5\n",
+        "#Read an integer n. For all non-negative integers i<N, print i^2\n",
+        "n = int(input())\n",
+        "i = 0\n",
+        "for i in range(n):\n",
+        "    print(i*i)"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "5\n",
+            "0\n",
+            "1\n",
+            "4\n",
+            "9\n",
+            "16\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "7Wzgz-aFuGfo",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 52
+        },
+        "outputId": "0164ebfa-f973-4a19-82da-dfb9721f21f5"
+      },
+      "source": [
+        "#Assignemnt 6\n",
+        "#Read an integer n. Without using any string methods, try to print the following:\n",
+        "\n",
+        "n = int(input())\n",
+        "for i in range(1,n+1):\n",
+        "    print(i,end = \"\")\n"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "10\n",
+            "12345678910"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "orh-BLvTAUPx",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 105
+        },
+        "outputId": "026e2765-5102-4c35-bead-ad51621aac6a"
+      },
+      "source": [
+        "#Assignment 7\n",
+        "#List comprehensions\n",
+        "x = int(input())\n",
+        "y = int(input())\n",
+        "z = int(input())\n",
+        "n = int(input())\n",
+        "a = [[i,j,k] for i in range(0,x + 1) for j in range(0,y + 1) for k in range(0,z + 1) if i + j + k != n]\n",
+        "print(a)"
+      ],
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1\n",
+            "1\n",
+            "1\n",
+            "2\n",
+            "[[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
